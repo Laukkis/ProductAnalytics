@@ -5,9 +5,17 @@ This repo contains scripts for analyzing data from course assignments
 
 ```
 git clone
-python test.py
+download necessary dependencies
+cd to problem folder
+python calculations.py
+python t-samples.py
 ```
-Results are now saved in its own folder
+Results are printed to console
 
 ### Disclaimers
 These are the first experiments with Python, so not necessarily the best solutions, but they work
+
+
+### TODO
+
+Finnish results saving to own excel. Now partly done
