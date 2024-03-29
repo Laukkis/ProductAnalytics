@@ -18,4 +18,4 @@ These are the first experiments with Python, so not necessarily the best solutio
 
 ### TODO
 
-Finnish results saving to own excel. Now partly done
+Finish results saving to own excel. Now partly done
