@@ -31,12 +31,13 @@ low_variance_cols = [col for col in data.columns if data[col].nunique() == 1]
 # Drop these columns
 data.drop(columns=low_variance_cols, inplace=True)
 
-# Additionally, for columns with many unique dummy variables, consider dropping those with very low frequencies
-threshold = 10  # You can adjust this threshold based on your dataset size and the specific column distribution
+
+threshold = 10  
+
 frequent_columns = [col for col in data.columns if 'county_' in col and data[col].sum() > threshold]
 data = data[frequent_columns + [col for col in data.columns if 'county_' not in col]]  # Keep non-county columns
 
-""" # Use the data DataFrame for splitting
+# Use the data DataFrame for splitting
 X = data.drop('issued', axis=1)
 y = data['issued']
 
@@ -59,6 +60,5 @@ report = classification_report(y_test, y_pred)
 print("Accuracy:", accuracy)
 print("ROC-AUC:", roc_auc)
 print("Classification Report:\n", report)
- """
 
-print("Columns after reduction:", data.columns)
+
